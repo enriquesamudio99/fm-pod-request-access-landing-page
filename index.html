@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pod request access landing page">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Pod request access landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__img"></div>
+                <div class="hero__dots">
+                    <img src="./assets/images/desktop/bg-pattern-dots.svg" alt="" class="hero__dots-img">
+                </div>
+
+                <a href="#" class="hero__logo">
+                    <img class="hero__logo-img" src="./assets/images/desktop/logo.svg" alt="Logo">
+                </a>
+
+                <div class="hero__content">
+                    <h1 class="hero__title">Publish your podcasts <span class="hero__title-span">everywhere.</span></h1>
+                    <p class="hero__text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+
+                    <ul class="hero__companies">
+                        <li class="hero__company hero__company--spotify">
+                            <img class="hero__company-img" src="./assets/images/desktop/spotify.svg" alt="Spotify Logo">
+                        </li>
+                        <li class="hero__company hero__company--apple">
+                            <img class="hero__company-img" src="./assets/images/desktop/apple-podcast.svg" alt="Apple Podcast Logo">
+                        </li>
+                        <li class="hero__company hero__company--google">
+                            <img class="hero__company-img" src="./assets/images/desktop/google-podcasts.svg" alt="Google Podcasts Logo">
+                        </li>
+                        <li class="hero__company hero__company--pocket">
+                            <img class="hero__company-img" src="./assets/images/desktop/pocket-casts.svg" alt="Pocket Casts Logo">
+                        </li>
+                    </ul>
+
+                    <form class="form" id="form">
+                        <div class="form__group">
+                            <input class="form__input" type="email" placeholder="Email address" id="emailInput" >
+                            <span class="form__error-msg">Oops! Please check your email</span>
+                            <button class="btn form__btn">Request Access</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assets/scripts.js"></script>
+</body>
+</html>
