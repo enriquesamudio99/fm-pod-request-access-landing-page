@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Font Families */
+  --ff-chivo: 'Chivo', sans-serif;
+
+  /* Colors */
+  --clr-white: #ffffff;
+  --clr-red: #FB3E3E;
+  --clr-green: #54E6AF;
+  --clr-blue-300: #C2CBE5;
+  --clr-blue-600: #5A668A;
+  --clr-blue-900: #2C344B;
+  --clr-blue-950: #121725;
+
+  /* Text Presets */
+  --txt-preset-1-sm: 300 2rem / 1.2 var(--ff-chivo);
+  --txt-preset-2-sm: 300 .875rem / 1.5 var(--ff-chivo);
+  --txt-preset-1-lg: 300 3rem / 1.2 var(--ff-chivo);
+  --txt-preset-2-lg: 300 1.125rem / 1.5 var(--ff-chivo);
+  --txt-preset-3-lg: 700 .875rem / 2 var(--ff-chivo);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  font: var(--txt-preset-2-sm);
+  background-color: var(--clr-blue-950);
+  color: var(--clr-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+label {
+  line-height: 1;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: none;
+  border: none;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: none;
+}
+
+/* End Reset */
+
+/* Globals */
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../images/mobile/image-host.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media (min-width: 48rem) {
+  .main {
+    background: none;
+    position: initial;
+  }
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-blue-950);
+  opacity: .9;
+}
+
+@media (min-width: 48rem) {
+  .main::before {
+    display: none;
+  }
+}
+
+.container {
+  width: calc(100% - 4.5rem);
+  max-width: 42.5rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 80rem) {
+  .container {
+    max-width: 70rem;
+  }
+}
+
+/* End Globals */
+
+/* Own Css */
+.hero {
+  margin: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content {
+  margin-top: 3.5rem;
+}
+
+.hero__title {
+  font: var(--txt-preset-1-sm);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero__title-span {
+  display: block;
+  color: var(--clr-green);
+}
+
+.hero__text {
+  margin-top: 1rem;
+  font: var(--txt-preset-2-sm);
+  text-align: center;
+  color: var(--clr-blue-300);
+}
+
+.hero__footer {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero__logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1rem, auto));
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__group {
+  position: relative;
+  display: grid;
+  gap: .5rem;
+}
+
+.hero__input {
+  background-color: var(--clr-blue-900);
+  padding: .5rem 2rem;
+  border-radius: 1.75rem;
+  font: var(--txt-preset-3-lg);
+  color: var(--clr-white);
+}
+
+.hero__input::placeholder {
+  color: var(--clr-white);
+  opacity: .5;
+}
+
+.hero__button {
+  background-color: var(--clr-green);
+  padding: .5rem 2rem;
+  border-radius: 1.75rem;
+  font: var(--txt-preset-3-lg);
+  color: var(--clr-blue-950);
+}
+
+/* End Own Css */
