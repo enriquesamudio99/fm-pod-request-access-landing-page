@@ -40,10 +40,11 @@
                 <img src="./assets/images/desktop/pocket-casts.svg" alt="Pocket Casts Logo"
                   class="hero__logo hero__logo--pocket-casts">
               </div>
-              <form action="#" class="hero__form">
+              <form action="#" class="hero__form" id="hero-form">
                 <div class="hero__group">
-                  <input type="text" class="hero__input" placeholder="Email address">
-                  <button type="submit" class="hero__button">Request Access</button>
+                  <input type="text" class="hero__input" id="hero-input" placeholder="Email address">
+                  <button type="submit" class="hero__button" id="hero-button">Request Access</button>
+                  <p class="hero__error-message" id="hero-error-message"></p>
                 </div>
               </form>
             </div>
@@ -52,6 +53,8 @@
       </div>
     </div>
   </main>
+
+  <script src="./assets/scripts/app.js"></script>
 </body>
 
 </html>

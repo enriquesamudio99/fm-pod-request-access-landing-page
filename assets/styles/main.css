@@ -373,19 +373,28 @@ a {
 
 .hero__input {
   background-color: var(--clr-blue-900);
-  padding: .5rem 2rem;
+  padding: .375rem 1.875rem;
   border-radius: 1.75rem;
   font: var(--txt-preset-3-lg);
   color: var(--clr-white);
+  border: 2px solid transparent;
 }
 
 .hero__input:focus {
-  outline: 1px solid var(--clr-blue-600);
+  outline: 2px solid var(--clr-blue-600);
+}
+
+.hero__input--error {
+  border: 2px solid var(--clr-red);
+}
+
+.hero__input--error:focus {
+  outline: none;
 }
 
 @media (min-width: 48rem) {
   .hero__input {
-    padding: .75rem 1.75rem;
+    padding: .625rem 1.625rem;
   }
 }
 
@@ -413,6 +422,26 @@ a {
     position: absolute;
     top: .25rem;
     right: .25rem;
+  }
+}
+
+.hero__error-message {
+  position: absolute;
+  color: var(--clr-red);
+  font-size: .75rem;
+  line-height: .875rem;
+  font-weight: 700;
+  bottom: -1.375rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .hero__error-message {
+    right: unset;
+    left: 2rem;
   }
 }
 
